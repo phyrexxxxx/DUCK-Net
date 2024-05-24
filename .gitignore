@@ -30,3 +30,9 @@ ModelSaveTensorFlow/
 
 # 排除 test.ipynb
 test.ipynb
+
+saved_model/
+
+original_data/
+
+resized_data/
