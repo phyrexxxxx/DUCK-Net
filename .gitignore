@@ -1,0 +1,32 @@
+# 排除 .pdf 檔案
+*.pdf
+
+# 排除 .md 檔案
+*.md
+
+# 排除 .npy 檔案
+*.npy
+
+# 排除 .zip 檔案
+*.zip
+
+# 排除 .rar 檔案
+*.rar
+
+# 排除以 results_ 開頭的 .txt 檔案
+results_*.txt
+
+# 排除以 Reproduce_Thesis- 開頭的 .txt 檔案
+Reproduce_Thesis-*.txt
+
+# 排除 results 目錄
+results/
+
+# 排除 plots 目錄
+plots/
+
+# 排除 ModelSaveTensorFlow 目錄
+ModelSaveTensorFlow/
+
+# 排除 test.ipynb
+test.ipynb
