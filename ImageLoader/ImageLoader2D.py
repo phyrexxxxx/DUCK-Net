@@ -9,16 +9,16 @@ folder_path = ""  # Add the path to your data directory
 
 
 def load_data(img_height, img_width, images_to_be_loaded, dataset):
-    IMAGES_PATH = folder_path + 'images/'
-    MASKS_PATH = folder_path + 'masks/'
+    IMAGES_PATH = folder_path + "images/"
+    MASKS_PATH = folder_path + "masks/"
 
-    if dataset == 'kvasir':
+    if dataset == "kvasir":
         train_ids = glob.glob(IMAGES_PATH + "*.jpg")
 
-    if dataset == 'cvc-clinicdb':
+    if dataset == "cvc-clinicdb":
         train_ids = glob.glob(IMAGES_PATH + "*.tif")
 
-    if dataset == 'cvc-colondb' or dataset == 'etis-laribpolypdb':
+    if dataset == "cvc-colondb" or dataset == "etis-laribpolypdb":
         train_ids = glob.glob(IMAGES_PATH + "*.png")
 
     if images_to_be_loaded == -1:
@@ -27,7 +27,7 @@ def load_data(img_height, img_width, images_to_be_loaded, dataset):
     X_train = np.zeros((images_to_be_loaded, img_height, img_width, 3), dtype=np.float32)
     Y_train = np.zeros((images_to_be_loaded, img_height, img_width), dtype=np.uint8)
 
-    print('Resizing training images and masks: ' + str(images_to_be_loaded))
+    print("Resizing training images and masks: " + str(images_to_be_loaded))
     for n, id_ in tqdm(enumerate(train_ids)):
         if n == images_to_be_loaded:
             break
